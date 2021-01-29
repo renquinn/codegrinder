@@ -201,7 +201,7 @@ def _codegrinder_show_instructions_handler():
         dialog.show_dialog()
 
 def show_instructions(problemDir):
-    with open(os.path.join(problemDir, 'doc', 'index.html')) as fp:
+    with open(os.path.join(problemDir, 'doc', 'index.html'), 'rb') as fp:
         doc = fp.read()
 
     iv = thonny.get_workbench().get_view('HtmlFrame')
